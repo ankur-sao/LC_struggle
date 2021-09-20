@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang build active file",
+            "command": "/usr/bin/clang",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: /usr/bin/clang"
+        },
+        {
+            "type": "cppbuild",
+            "label": "ansao_gpp_cpp",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "${workspaceFolder}/*.cpp",
+                "-o",
+                "${workspaceFolderBasename}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "compiler: /usr/bin/g++"
+        },
+        {
+            "label" : "run",
+            "type": "shell",
+            "command": "./${workspaceFolderBasename}",
+            "dependsOn": [
+                "ansao_gpp_cpp"
+            ],
+            "problemMatcher":[],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+
