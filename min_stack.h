@@ -57,9 +57,8 @@ public:
             smin   = x;
         }
     }
-    
+
     void pop() {
-      
         long long tp = st.top();
         if (tp < smin) smin  = 2*smin - tp;
         st.pop();
@@ -76,6 +75,8 @@ public:
         return smin;
     }
 };
+
+
 /*
 
 https://www.techiedelight.com/design-a-stack-which-returns-minimum-element-without-using-auxiliary-stack/
@@ -87,8 +88,15 @@ min  = x
 a , b
 a < b
 
+a-b           
+
 t < b   composed  of a and b
-a     t  = 2a-b 
+a     t  = 2a-b  b:oldMin a:newMin
+  
+-3, 5 , -6,2
+
+
+
 t  = 2a-b
 b= 2a-t
 
