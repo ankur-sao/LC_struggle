@@ -6,7 +6,10 @@
 #include "linked_list.h"
 #include "min_stack.h"
 #include "queue_stack.h"
+#include "sliding_window_max.h"
+
 #include<cmath>
+
 
 using namespace std;
 
@@ -17,10 +20,14 @@ int main(){
 
     cout <<  "Hello  world!" << endl;
 
-    vector<int> A = {1,2,3,4};
+    vector<int> A = {-10,-2,3,4,-5,2,3,1};
 
-  
-   cout << (1<<1); nl;
+    slideWindowMax SM;
+
+    vector<int> B = SM.solution3(A,3);
+    for(auto b:B)cout<<b<<" ";
+    nl;
+
    return 0;
 
 }

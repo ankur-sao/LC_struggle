@@ -110,4 +110,8 @@ pop(): x > min, pop(x);  x < min,  orig  = min. min = 2*min - top;
 
 top(): x > min, top(x); x < min, return min;
 
+
+time complexity discussion:
+
+
 */
