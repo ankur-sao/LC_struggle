@@ -7,6 +7,7 @@
 #include "min_stack.h"
 #include "queue_stack.h"
 #include "sliding_window_max.h"
+#include "palindrome_int.h"
 
 #include<cmath>
 
@@ -20,14 +21,9 @@ int main(){
 
     cout <<  "Hello  world!" << endl;
 
-    vector<int> A = {-10,-2,3,4,-5,2,3,1};
-
-    slideWindowMax SM;
-
-    vector<int> B = SM.solution3(A,3);
-    for(auto b:B)cout<<b<<" ";
-    nl;
-
+    if (isPalindrome(121)){
+        cout <<"Yes";nl;
+    }
    return 0;
 
 }
