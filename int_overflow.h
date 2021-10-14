@@ -52,6 +52,12 @@ int int_overflow::reverse(int a){
 }
 
 /*
+link  to get related questions.
+
+https://leetcode.com/problems/perfect-squares/
+
+
+
 Return least number of sqaures needed to make sum of n.
 12  = 4+4+4  < 9+1+1+1   == 3
 11  = 9+1+1  = 2
