@@ -33,10 +33,11 @@ now, rev number contains rev of first-half.
 remaining number contains  second-half. 
 if number originally had even no of digits, rev == rem.
 else rev/10 == rem
+handle 0 , negative, and number ending with 0 saparately. 
 
 */
 bool isPalindrome(int x){
-    if (x<0 || x!=0 && x%10==0) return false;
+    if (x<0 || (x!=0 && x%10==0)) return false;
         
     int sum  = 0;
         

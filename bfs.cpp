@@ -10,7 +10,7 @@
 #include "palindrome_int.h"
 
 #include<cmath>
-
+#include"slidingWindow.h"
 
 using namespace std;
 
@@ -21,9 +21,13 @@ int main(){
 
     cout <<  "Hello  world!" << endl;
 
-    if (isPalindrome(121)){
-        cout <<"Yes";nl;
-    }
+    window W;
+
+    string S = "bagsvdhaotebdkkkjkhgstwbsvo";
+    string T = "dhao";
+
+    cout << W.minWindow(S,T) << endl;
+
    return 0;
 
 }
