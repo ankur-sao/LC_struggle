@@ -92,6 +92,7 @@ mright[i][e]    e(i+1,i+2, e)
 
 */
 class SaoSolution {
+
 public:
     
     vector<vector<int>> mleft,mright;
@@ -148,4 +149,53 @@ public:
 
         return maxSubSum(nums, 0, n-1);
     }
+};
+
+
+/*
+Buy/sell/cool-down stocks to maximize profit.
+
+My O(n^2) took 100ms. 
+There is O(n) solution.
+*/
+
+class profitStocks {
+public:
+    int maxProfitnsq(vector<int>& prices) {
+        vector<int> &p = prices;
+        
+        int mp[5001]; mp[0] = 0; int n = prices.size();
+        
+        for(int j=1; j<n; j++){
+            
+            int max_sell = 0;
+            
+            for(int i = 0; i < j; i++){
+                int sell = p[j] - p[i];
+                if (i>1) sell += mp[i-2];
+                max_sell = max(max_sell, sell);
+            }
+            int not_sell = mp[j-1];
+            mp[j] = max(not_sell, max_sell);
+        }
+        
+        return mp[n-1];
+    }
+
+    int maxProfitns(vector<int>& prices) {
+        if (prices.size() <= 1) return 0;
+		vector<int> s0(prices.size(), 0);
+		vector<int> s1(prices.size(), 0);
+		vector<int> s2(prices.size(), 0);
+		s1[0] = -prices[0];
+		s0[0] = 0;
+		s2[0] = INT_MIN;
+		for (int i = 1; i < prices.size(); i++) {
+			s0[i] = max(s0[i - 1], s2[i - 1]);
+			s1[i] = max(s1[i - 1], s0[i - 1] - prices[i]);
+			s2[i] = s1[i - 1] + prices[i];
+		}
+		return max(s0[prices.size() - 1], s2[prices.size() - 1]);
+    }
+
 };
