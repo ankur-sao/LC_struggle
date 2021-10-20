@@ -155,6 +155,8 @@ public:
 /*
 Buy/sell/cool-down stocks to maximize profit.
 
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75928/Share-my-DP-solution-(By-State-Machine-Thinking)
+
 My O(n^2) took 100ms. 
 There is O(n) solution.
 */

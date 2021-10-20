@@ -10,7 +10,8 @@
 #include "palindrome_int.h"
 
 #include<cmath>
-#include"slidingWindow.h"
+#include "slidingWindow.h"
+#include "string_problem.h"
 
 using namespace std;
 
@@ -18,16 +19,15 @@ using namespace std;
 #define nl cout<<endl
 
 int main(){
+    
+    string A =  "  Ankur     Sao";
+    Spliter S;
+    vector<string> B;
+    S.split(A, ' ', B);
+    cout << "start  printing\n";
+    for(auto s: B)cout<<s<<endl;
 
-    cout <<  "Hello  world!" << endl;
 
-    window W;
-
-    string S = "bagsvdhaotebdkkkjkhgstwbsvo";
-    string T = "dhao";
-
-    cout << W.minWindow(S,T) << endl;
 
    return 0;
-
 }
