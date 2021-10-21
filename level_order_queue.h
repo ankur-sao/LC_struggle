@@ -44,6 +44,7 @@ LOT: can be done using 2 queue or 1 queue.
 #include<iostream>
 #include <queue>
 #include <vector>
+#include "Tree.h"  
 
 
 class Solution {

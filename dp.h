@@ -201,3 +201,30 @@ public:
     }
 
 };
+
+
+class trapRainWater{
+    public:
+    int getTrappedWater(vector<int> &A);
+};
+
+int trapRainWater::getTrappedWater(vector<int> &height){
+    int n = height.size();
+    int left = 0, right = n-1;
+        
+    int left_max = INT_MIN, right_max = INT_MIN;
+        
+    int ans  = 0;
+        
+    while (left < right){
+        if (height[left] < height[right]){
+               
+            left++;
+            }else{
+
+        right--;
+            }
+        }
+        return ans;
+        
+}
