@@ -24,7 +24,7 @@ public:
         
         for(int i=0; i<n;i++){
             int pos = rand() % (n-i);
-            swap(B[i],B[i+pos]);
+            swap(B[i],B[i+pos]);      //i+pos <= n-1   rand() % (n-i)
         }
         return B;
     }
